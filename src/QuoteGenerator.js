@@ -44,7 +44,7 @@ class QuoteGenerator extends Component {
 
 	render(){
 		return(
-			<p ref="shownQuote">{this.state.display}</p>
+			<p ref="shownQuote">"{this.state.display}"</p>
 			)
 	}
 }

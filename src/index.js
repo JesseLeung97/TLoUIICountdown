@@ -6,7 +6,7 @@ import './fonts/PressGothic.otf';
 import QuoteGenerator from './QuoteGenerator';
 
 ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<QuoteGenerator />, document.getElementById('quotes'));
+
 
 
 
