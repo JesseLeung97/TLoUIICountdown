@@ -5,18 +5,31 @@
 
 html {
 	overflow: hidden;
-	margin: 0;
 	height: 100%;
+	width: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: PressGothic;
   text-align: center;
+  background-color: black;
 }
 
-.backgroundImage{
+.App{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-size: cover;
+}
+
+#backgroundImage{
 	background-image: url('images/ellieBackground.png');
 	width: 100%;
 	height: 100%;
@@ -24,6 +37,142 @@ body {
 	background-size: cover;
 	z-index: -1;
 	filter: brightness(1.25);
+}
+
+.backgroundImageBlur{
+	filter: blur(2px) !important;
+	-webkit-filter: blur(20px);
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+#toggleButton{
+	font-family: PressGothic;
+	font-size: 20px;
+	z-index: 999;
+	position: absolute;
+	top: 30px;
+	right: 170px;
+	color: #A9A9A9;
+	background-color: transparent;
+	border: none;
+	text-decoration: none;
+	font-weight: normal;
+	outline: none;
+	cursor: pointer;
+	animation: buttonFadeIn ease 4s;
+	animation-iteration-count: 1;
+}
+
+#toggleButton:hover{
+	color: #FFBF00;
+}
+
+.buttonIsSelected{
+	color: #FFBF00 !important;
+}
+
+#preorderLink a{
+	font-family: PressGothic;
+	font-size: 20px;
+	z-index: 999;
+	position: absolute;
+	top: 30px;
+	right: 70px;
+	color: #A9A9A9;
+	background-color: transparent;
+	border: none;
+	text-decoration: none;
+	outline: none;
+	font-weight: normal;
+	animation: buttonFadeIn ease 4s;
+	animation-iteration-count: 1;
+}
+
+a:visited{
+	color: white;
+}
+
+#preorderLink a:hover{
+	color: #FFBF00;
+}
+
+.aboutOverlayContainer{
+	display: flex;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.aboutPreload{
+	opacity: 0 !important;
+}
+
+.aboutOverlay{
+	display: inline-block;
+	background: black;
+	opacity: .5;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	z-index: 98;
+	animation: aboutFadeIn ease .65s;
+	animation-iteration-count: 1;
+}
+
+.noAboutOverlay{
+	background-color: black;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	z-index: 99;
+	animation: aboutFadeOut ease .5s;
+	animation-iteration-count: 1;
+	text-align: center;
+}
+
+.aboutCenterMessage{
+	background: black;
+	display: inline-block;
+	opacity: .75;
+	color: white;
+	position: absolute;
+	height: 65%;
+	width: 25%;
+	z-index: 99;
+	box-shadow: 0px 0px 50px 50px black;
+	animation: aboutCenterMessageFadeIn ease .65s;
+	animation-iteration-count: 1;
+	transition: outline 2s linear;
+
+}
+
+.noAboutCenterMessage{
+	background: black;
+	display: inline-block;
+	opacity: 0;
+	color: white;
+	position: absolute;
+	height: 65%;
+	width: 25%;
+	z-index: 99;
+	box-shadow: 0px 0px 50px 50px black;
+	animation: aboutCenterMessageFadeOut ease .5s;
+	animation-iteration-count: 1;
+
+}
+
+#aboutMessage{
+	position: absolute;
+	line-height: 1.5;
+	animation: slideUpFadeInMessage ease .65s;
 }
 
 #particleEffect{
@@ -41,22 +190,33 @@ body {
 	filter: brightness(1.25);
 }
 
+.countdownTimer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
 .Countdown{
-  margin: -5% auto;
-  position: absolute;
-  left: 40%;
   color: white;
-  font-family: PressGothic;
+  display: inline-block;
+  position: absolute;
+  width:;
+  margin-left: auto;
+  margin-right: auto;
   animation: slide-up-fade-in ease 4s;
   animation-iteration-count: 1;
   animation-fill-mode:forwards; 
   opacity:0;
-  opacity: 1\9;
-
 }
 
 .Countdown-col{
   display: inline-block;
+  align-items: center;
 }
 
 .Countdown-col-element{
@@ -69,35 +229,51 @@ body {
 .Countdown-col-element strong{
   font-size: 50px;
   font-weight: normal;
+  width: 34px;
 }
 
-.quotesShow {
-	color: white;
-	font-family: PressGothic;
-	animation: slideRightFadeIn ease 4s;
-	animation-iteration-count: 1;
-	opacity: 0;
+.Countdown-col-darken{
+	filter: brightness(.5);
+	transition: filter .65s;
 }
 
-.quotesHide {
+.quoteContainer {
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.shownQuote{
 	color: white;
-	font-family: PressGothic;
-	animation: slideRightFadeOut ease 4s;
-	animation-iteration-count: 1;
-	opacity: 1;
+	font-size: 20px;
+	display: inline-block;
+	font-weight: normal;
+	margin-top: 15%;
+	animation: quoteAppearQuoteDisappear ease 9s;
+	animation-iteration-count: infinite;
+
+}
+
+.quote-container-darken{
+	filter: brightness(.5);
+	transition: filter .65s;
 }
 
 .logo{
 	content: url('images/tlouiiwidelogo.png');
 	height: 20%;
-	position: relative;
+	position: absolute;
+	padding-bottom: 6%;
 	display: inline-block;
-	margin-top: 18%;
 	animation: slide-up-fade-out ease 4s;
 	animation-iteration-count: 1;
 	animation-fill-mode:forwards;
 	opacity: 0;
-	opacity: 1\9;
 }
 
 .blackOverlay{
@@ -107,7 +283,7 @@ body {
 	width: 100%;
 	height: 100%;
 	position: fixed;
-	animation: fadeOverlay ease 1.5s;
+	animation: fadeBlackOverlay ease 1.5s;
   	animation-iteration-count: 1;
   	animation-fill-mode:forwards; 
 	opacity: 1;
@@ -159,7 +335,7 @@ body {
     }
 }
 
-@keyframes fadeOverlay{
+@keyframes fadeBlackOverlay{
 	0% {
 		opacity: 1;
 	}
@@ -168,22 +344,97 @@ body {
 	}
 }
 
-@keyframes slideLeftFadeIn{
+@keyframes aboutFadeIn{
 	0% {
 		opacity: 0;
-		transform: translateX(-20px);
+	}
+	100%{
+		opacity: .5;
+	}
+}
+
+@keyframes aboutCenterMessageFadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: .75;
+	}
+}
+
+@keyframes aboutFadeOut{
+	0% {
+		opacity: .5;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+@keyframes aboutCenterMessageFadeOut{
+	0% {
+		opacity: .75;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes slideUpFadeInMessage{
+	0% {
+		opacity: 0;
+		transform: translate(0px, 40px);
+    	-webkit-transform: translate(0px, 40px);
 	}
 	100% {
 		opacity: 1;
 	}
 }
 
-@keyframes slideRightFadeOut{
+@keyframes slideDownFadeOutMessage{
 	0% {
 		opacity: 1;
-		transform: translateX(-20px);
+		transform: translate(0px, -40px);
+    	-webkit-transform: translate(0px, -40px);
 	}
 	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes buttonFadeIn{
+	0% {
+        opacity:0;
+    }
+    70% {
+    	opacity: 0;
+    	transform: translate(20px, 0px);
+    	-webkit-transform: translate(20px, 0px);
+    }
+    100% {
+        opacity:1;
+        transform:  translate(0px,0px);
+        -webkit-transform: translate(0px, 0px);
+    }
+}
+
+@keyframes quoteAppearQuoteDisappear{
+	0%{
+		opacity: 0;
+	}
+	15%{
+		opacity: 0;
+	}
+	25%{
+		opacity: 1;
+	}
+	75%{
+		opacity: 1;
+	}
+	85%{
+		opacity: 0;
+	}
+	100%{
 		opacity: 0;
 	}
 }
