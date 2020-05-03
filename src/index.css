@@ -231,7 +231,7 @@ a:visited{
 
 .Countdown-col-element{
   display: inline-block;
-  font-size: clamp(16px, 1.2vw, 20px);
+  font-size: clamp(10px, 1.2vw, 16px);
   margin: 0 clamp(10px, 1.35vw, 20px);
   display: flex;
   flex-direction: column;
