@@ -3,31 +3,6 @@
 	src: local('PressGothic'), url(./fonts/PressGothic.otf)format('truetype');
 }
 
-@media only screen and (max-resolution: 100dpi){
-	html{
-		letter-spacing: .025em;
-	}
-	#toggleButton{
-		letter-spacing: .025em !important;
-	}
-	#aboutMessage{
-		font-size: 20px;
-	}
-	.shownQuote{
-		font-size: 22px !important;
-	}
-	.Countdown-col-element{
-		font-size: 20px !important;
-	}
-	.Countdown-col-element strong{
-		font-size: 55px !important;
-	}
-	#aboutMessage{
-		letter-spacing: .025em;
-	}
-
-}
-
 html {
 	overflow: hidden;
 	height: 100%;
@@ -171,7 +146,6 @@ a:visited{
 	display: inline-block;
 	opacity: .75;
 	color: white;
-	font-size: 1.3vw;
 	position: fixed;
 	height: 65%;
 	width: 25%;
@@ -199,6 +173,7 @@ a:visited{
 }
 
 #aboutMessage{
+	font-size: clamp(10px, 1.3vw, 20px);
 	width: 100%;
 	line-height: 1.5;
 	padding: 5px;
@@ -256,14 +231,14 @@ a:visited{
 
 .Countdown-col-element{
   display: inline-block;
-  font-size: 1.2vw;
-  margin: 0 1.35vw;
+  font-size: clamp(16px, 1.2vw, 20px);
+  margin: 0 clamp(10px, 1.35vw, 20px);
   display: flex;
   flex-direction: column;
 }
 
 .Countdown-col-element strong{
-  font-size: 3.8vw;
+  font-size: clamp(35px, 3.8vw, 50px);
   font-weight: normal;
   width: 34px;
 }
@@ -287,10 +262,10 @@ a:visited{
 
 .shownQuote{
 	color: white;
-	font-size: 1.5vw;
+	font-size: clamp(10px, 1.5vw, 20px);
 	display: inline-block;
 	font-weight: normal;
-	margin-top: 15%;
+	margin-top: clamp(100px, 25vh, 200px);
 	animation: quoteAppearQuoteDisappear ease 9s;
 	animation-iteration-count: infinite;
 
