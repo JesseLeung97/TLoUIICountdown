@@ -7,7 +7,18 @@ class About extends Component{
 		this.state = {
 			aboutPageVisible: false,
 			preload: true,
-			aboutText: "The Last of Us is a 2013 action-adventure game developed by Naughty Dog and published by Sony Computer Entertainment. Players control Joel, a smuggler tasked with escorting a teenage girl, Ellie, across a post-apocalyptic United States. The Last of Us is played from a third-person perspective. Players use firearms and improvised weapons, and can use stealth to defend against hostile humans and cannibalistic creatures infected by a mutated strain of the Cordyceps fungus. In the online multiplayer mode, up to eight players engage in cooperative and competitive gameplay.",
+			aboutText1: `Thank you for visiting my unofficial countdown to the release of The Last of Us Part II.  
+			This project was created in anticipation for the next iteration in the story of Joel and Ellie.  
+			In such disheartening times know that just as a tree weathers even the stormiest 
+			of nights, this community too will endure and survive.`,
+			aboutText2: `This site was written in the React framework for Javascript.  Videos and images were edited 
+			in the Adobe suite and animations are CSS triggered by Javascript.  
+			There are 50 quotes included from Part I, Left Behind, and the Part II trailers.`,
+			aboutText3: `I owe the utmost gratitude to Kastat for his tireless guidance in navigating the expanse of 
+			CSS and for his excitement and encouragement throughout the project’s conception.  Likewise, I’m grateful 
+			for all of those at Naughty Dog who have poured their soul into creating and sharing unforgettable 
+			experiences.`,
+			aboutText4: `After all we've been through.  Everything that I've done.  It can't be for nothing.`,
 		};
 		this.handleClick = this.handleClick.bind(this);
 		this.aboutPage = React.createRef();
@@ -44,8 +55,12 @@ class About extends Component{
 						ABOUT
 					</button>
 					<div className="aboutCenterMessage" onClick={this.handleClick}>
-						<h2 id="aboutMessageTitle"> About </h2>
-						<p id="aboutMessage">{this.state.aboutText}</p>
+						<div id="aboutMessage">
+							<p>{this.state.aboutText1}</p>
+							<p>{this.state.aboutText2}</p>
+							<p>{this.state.aboutText3}</p>
+							<p>{this.state.aboutText4}</p>
+						</div>
 					</div>
 					<div className="aboutOverlay" onClick={this.handleClick}></div>
 				</div>

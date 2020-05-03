@@ -1,0 +1,7 @@
+Thank you for visiting my countdown to the release of The Last of Us Part II!  I created this project in anticipation for June 19th, 2020, and in celebration of the countless hours the developers at Naughty Dog have put into crafting this iteration in the story of Joel and Ellie.  In such disheartening times it’s easy to feel overwhelmed by negativity but it’s important to remind ourselves of the love, wonder, and friendships which have blossomed out of this community.  Just as a tree weathers even the stormiest of nights, this community too will endure and survive.
+
+This site was written in the React framework for Javascript.  The particle effect was achieved through an overlaid video while all other animations are CSS triggered by Javascript.  There are 23 quotes included from Part I, Left Behind, the Naughty Dog team, and the Part II trailers.  Can you spot them all?
+
+I owe the utmost gratitude to Kastat for his tireless guidance in navigating the expanse of CSS and for his excitement and encouragement throughout the project’s conception.  I owe thanks also to the TLoU discord server for their suggestion of important quotes.  Lastly, I’m grateful for all of those at Naughty Dog who have poured their soul into crating and sharing unforgettable experiences.
+
+After all we've been through.  Everything that I've done.  It can't be for nothing.

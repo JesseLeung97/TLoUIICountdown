@@ -30,7 +30,34 @@ class QuoteGenerator extends Component {
       		"It's called luck, and it is gonna run out.",
       		"I'm gonna find, and I'm gonna kill, every last one of them.",
       		"Brick. Fucking. Master!",
-      		"My vote? Let's just wait it out."
+      		"My vote? Let's just wait it out.",
+          "After Years Of Wandering In Circles, We’re About To Come Home, Make A Difference, And Bring The Human Race Back Into Control Of Its Own Destiny.",
+          "Tell them that Ellie is the little girl that broke your fucking finger!",
+          "I know, step on the fucking pallet.",
+          "Well, Skeleseer can suck my dick.",
+          "Let go of me you chickenshit!",
+          "You are treading on some mighty thin ice here.",
+          "I'm scared of ending up alone.",
+          "Get up, get up.  You gotta tell me what to do.  You gotta get up...Joel?",
+          "I swear to god.  I get you out of this, you're so singing for me.",
+          "Holy shit, Joel.",
+          "Clip her wings.",
+          "I have a very serious question for you.  How bad do I smell?",
+          "I'm...just a girl.  Not a threat.",
+          "Oh Ellie, I think they should be terrified of you.",
+          "So fucking cool.",
+          "Guess what, we're shitty people Joel.  It's been that way for a long time.",
+          "Look, there's enough here that you have to feel some sort of obligation to me.",
+          "I will not turn into one of those things.",
+          "No, just go!  Just...fucking go.",
+          "Once upon a time, I had somebody that I cared about.  And in this world, that sort of shit's good for one thing: Gettin' you killed.",
+          "I've been on quite the adventure, little brother.",
+          "You have no idea what loss is.",
+          "I swear.",
+          "Don't waste this gift, Joel.",
+          "What kind of name is Callus, anyways?",
+          "I guess no matter how hard you try, you can't escape your past.",
+          "It's got its ups and down.  You can't deny the view though."
       		],
     	};
   	}
@@ -52,12 +79,13 @@ class QuoteGenerator extends Component {
 	render(){
 		if(this.state.preload){
 			return(
-				<div></div>
+				<div id="quoteContainerID" className="quoteContainer">
+        </div>
 			);		
 		} else {
 			return(
 				<div id="quoteContainerID" className="quoteContainer">
-					<p className="shownQuote">"{this.state.display}"</p>
+					<h2 className="shownQuote">"{this.state.display}"</h2>
 				</div>
 			);
 		}

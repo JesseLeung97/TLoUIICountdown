@@ -3,17 +3,44 @@
 	src: local('PressGothic'), url(./fonts/PressGothic.otf)format('truetype');
 }
 
+@media only screen and (max-resolution: 100dpi){
+	html{
+		letter-spacing: .025em;
+	}
+	#toggleButton{
+		letter-spacing: .025em !important;
+	}
+	#aboutMessage{
+		font-size: 20px;
+	}
+	.shownQuote{
+		font-size: 22px !important;
+	}
+	.Countdown-col-element{
+		font-size: 20px !important;
+	}
+	.Countdown-col-element strong{
+		font-size: 55px !important;
+	}
+	#aboutMessage{
+		letter-spacing: .025em;
+	}
+
+}
+
 html {
 	overflow: hidden;
 	height: 100%;
 	width: 100%;
+	text-shadow: 0 0 .01em black;
+
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: PressGothic;
-  text-align: center;
+  
   background-color: black;
 }
 
@@ -21,16 +48,14 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	top: 0;
-	left: 0;
-	height: 100%;
+  	height: 100%;
 	width: 100%;
 	position: absolute;
 	background-size: cover;
 }
 
 #backgroundImage{
-	background-image: url('images/ellieBackground.png');
+	background-image: url('images/ellieBackgroundGradient1080p.png');
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -41,10 +66,13 @@ body {
 
 .backgroundImageBlur{
 	filter: blur(2px) !important;
-	-webkit-filter: blur(20px);
+	-webkit-filter: blur(2px);
+	opacity: 1;
 	height: 100%;
 	width: 100%;
 	z-index: -1;
+	transition-timing-function: opacity .65s ease;
+	-webkit-transition-timing-function: opacity .65s ease;
 }
 
 #toggleButton{
@@ -78,7 +106,7 @@ body {
 	font-size: 20px;
 	z-index: 999;
 	position: absolute;
-	top: 30px;
+	top: 31px;
 	right: 70px;
 	color: #A9A9A9;
 	background-color: transparent;
@@ -143,6 +171,7 @@ a:visited{
 	display: inline-block;
 	opacity: .75;
 	color: white;
+	font-size: 18px;
 	position: absolute;
 	height: 65%;
 	width: 25%;
@@ -172,6 +201,12 @@ a:visited{
 #aboutMessage{
 	position: absolute;
 	line-height: 1.5;
+	padding: 5px;
+	animation: slideUpFadeInMessage ease .65s;
+}
+
+#aboutMessageTitle{
+	text-align: center;
 	animation: slideUpFadeInMessage ease .65s;
 }
 
@@ -186,8 +221,8 @@ a:visited{
 	transform: translateX(-50%) translateY(-50%);
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	background-size: cover;
-	opacity: .15;
-	filter: brightness(1.25);
+	mix-blend-mode: screen;
+	opacity: .35;
 }
 
 .countdownTimer{
@@ -203,9 +238,9 @@ a:visited{
 
 .Countdown{
   color: white;
+  text-align: center;
   display: inline-block;
   position: absolute;
-  width:;
   margin-left: auto;
   margin-right: auto;
   animation: slide-up-fade-in ease 4s;
@@ -238,6 +273,7 @@ a:visited{
 }
 
 .quoteContainer {
+	text-shadow: 0 0 1px black;
 	display: flex;
 	position: absolute;
 	top: 0;
@@ -383,22 +419,11 @@ a:visited{
 @keyframes slideUpFadeInMessage{
 	0% {
 		opacity: 0;
-		transform: translate(0px, 40px);
-    	-webkit-transform: translate(0px, 40px);
+		transform: translate(0px, 30px);
+    	-webkit-transform: translate(0px, 30px);
 	}
 	100% {
 		opacity: 1;
-	}
-}
-
-@keyframes slideDownFadeOutMessage{
-	0% {
-		opacity: 1;
-		transform: translate(0px, -40px);
-    	-webkit-transform: translate(0px, -40px);
-	}
-	100% {
-		opacity: 0;
 	}
 }
 
