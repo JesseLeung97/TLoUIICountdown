@@ -8,7 +8,7 @@ class About extends Component{
 			aboutPageVisible: false,
 			preload: true,
 			aboutText1: `Thank you for visiting my unofficial countdown to the release of The Last of Us Part II.  
-			This project was created in anticipation for the next iteration in the story of Joel and Ellie.  
+			This project was created in anticipation of the next iteration in the story of Joel and Ellie.  
 			In such disheartening times, know that just as a tree weathers even the stormiest 
 			of nights, this community too will endure and survive.`,
 			aboutText2: `This site was written in the React framework for Javascript.  Videos and images were edited 
