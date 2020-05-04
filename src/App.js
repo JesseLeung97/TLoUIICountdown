@@ -3,6 +3,7 @@ import Countdown from './Countdown.js';
 import particleEffect from './images/particleEffect_tripleLength.mp4';
 import QuoteGenerator from './QuoteGenerator.js';
 import About from './About.js';
+import logo from './images/tlouiiwidelogo.png';
 
 class App extends Component {
   render() {
@@ -13,7 +14,9 @@ class App extends Component {
       <div className="App">
           <div id="backgroundImage" className="backgroundImageNoBlur"></div>
           <div id="preorderLink"><a href="https://www.thelastofus.playstation.com/">PREORDER</a></div>
-          <div className="logo"></div>
+          <div className="logo">
+            <img id="logo" src={logo} alt="logo" height="150px" />
+          </div>
           <div className="countdownTimer">
             <Countdown date={`${year}-06-19T00:00:00`} />
           </div>
