@@ -23,7 +23,7 @@ class App extends Component {
         <div className="App">
           <div id="backgroundImage" className="backgroundImageNoBlur"></div>
           <div className="logo">
-            <img id="logo" src={logo} alt="logo" height="150px" />
+            <img id="logo" src={logo} alt="logo" height="100" />
           </div>
           <div className="countdownTimer">
             <Countdown date={`${year}-06-19T00:00:00`} />
@@ -45,7 +45,7 @@ class App extends Component {
         <div className="App">
           <div id="backgroundImage" className="backgroundImageNoBlur"></div>
           <div className="logo">
-            <img id="logo" src={logo} alt="logo" height="150px" />
+            <img id="logo" src={logo} alt="logo" height="150" />
           </div>
           <div className="countdownTimer">
             <Countdown date={`${year}-06-19T00:00:00`} />
