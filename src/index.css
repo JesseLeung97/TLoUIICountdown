@@ -131,7 +131,7 @@ body {
 	font-size: 20px;
 	z-index: 999;
 	position: fixed;
-	top: 30px;
+	top: 3vh;
 	right: 170px;
 	color: #A9A9A9;
 	background-color: transparent;
@@ -157,7 +157,7 @@ body {
 	font-size: 20px;
 	z-index: 999;
 	position: absolute;
-	top: 30px;
+	top: 3vh;
 	right: 70px;
 	color: #A9A9A9 !important;
 	background-color: transparent;
