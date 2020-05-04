@@ -13,16 +13,16 @@ class App extends Component {
     return(
       <div className="App">
           <div id="backgroundImage" className="backgroundImageNoBlur"></div>
-          <div id="preorderLink"><a href="https://www.thelastofus.playstation.com/">PREORDER</a></div>
           <div className="logo">
             <img id="logo" src={logo} alt="logo" height="150px" />
           </div>
           <div className="countdownTimer">
             <Countdown date={`${year}-06-19T00:00:00`} />
           </div>
-          <video id="particleEffect" width="100%" height="100%" muted autoPlay loop>
+          <video id="particleEffect" width="100%" height="100%" muted="true" autoPlay loop>
             <source src={particleEffect} type="video/mp4" />
           </video>
+          <div id="preorderLink"><a href="https://www.thelastofus.playstation.com/">PREORDER</a></div>
           <div id="quotes">
             <QuoteGenerator />
           </div>
