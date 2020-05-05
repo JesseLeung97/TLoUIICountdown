@@ -29,7 +29,7 @@ class About extends Component{
 			aboutPageVisible: !state.aboutPageVisible,
 			preload: false,
 		}));
-		document.getElementById('backgroundImage').classList.toggle('backgroundImageBlur');
+		document.getElementById('backgroundImage' || 'backgroundImageMobile').classList.toggle('backgroundImageBlur');
 		document.getElementById('CountdownContainer').classList.toggle('Countdown-col-darken');
 		document.getElementById('quoteContainerID').classList.toggle('quote-container-darken');
 		document.getElementById('toggleButton').classList.toggle('buttonIsSelected');
