@@ -187,7 +187,7 @@ a:visited{
 }
 
 #preorderLink a:hover{
-	color: #FFBF00;
+	color: #FFBF00 !important;
 }
 
 .aboutOverlayContainer{
@@ -388,14 +388,6 @@ a:visited{
 	-o-animation-iteration-count: 1;
 	-o-animation-fill-mode: forwards;
 	-o-opacity: 0;
-}
-
-.date_insert{
-	position: absolute;
-	font-size: 20px;
-	color: white;
-	left: 70px;
-	bottom: 0px;
 }
 
 .blackOverlay{
