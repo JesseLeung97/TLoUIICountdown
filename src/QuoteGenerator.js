@@ -19,7 +19,7 @@ class QuoteGenerator extends Component {
       		"Drugs.  I sell hardcore drugs.",
       		"If I get in trouble down there, you make every shot count.",
       		"You'd just come after her.",
-      		"I got you, baby girl.",
+      		"Oh, baby girl.",
       		"When you're lost in the darkness, look for the light.",
       		"Why are these pages stuck together?",
       		"It's the normal people that scare me.",
@@ -57,7 +57,15 @@ class QuoteGenerator extends Component {
           "Don't waste this gift, Joel.",
           "What kind of name is Callus, anyways?",
           "I guess no matter how hard you try, you can't escape your past.",
-          "It's got its ups and down.  You can't deny the view though."
+          "It's got its ups and down.  You can't deny the view though.",
+          "Whoa nellie!",
+          "I am none of your goddamn business.",
+          "I've been on both sides.",
+          "No!  You scared the shit outta me!",
+          "Everyone has a family.  Best not to dwell on it.",
+          "I took out a couple of infected on my own.  You'd be proud.",
+          "Man you lived in a strange time."
+
       		],
     	};
   	}
