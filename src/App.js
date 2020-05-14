@@ -63,7 +63,7 @@ class App extends Component {
             <Countdown date={`${year}-06-19T00:00:00`} />
           </div>
           <div>{sporeBackground}</div>
-          <div id="preorderLink"><a href="https://www.thelastofus.playstation.com/">PREORDER</a></div>
+          <div id="preorderLink"><a href="https://www.thelastofus.playstation.com/" target="_blank">PREORDER</a></div>
           <div id="quotes">
             <QuoteGenerator />
           </div>

@@ -13,7 +13,7 @@ class About extends Component{
 			of nights, this community too will endure and survive.`,
 			aboutText2: `This site was written in the React framework for Javascript.  Videos and images were edited 
 			in the Adobe suite and animations are CSS triggered by Javascript.  
-			There are 50 quotes included from Part I, Left Behind, and the Part II trailers.`,
+			There are over 50 quotes included from Part I, Left Behind, and the Part II trailers.`,
 			aboutText3: `I owe the utmost gratitude to Kastat for his tireless guidance in navigating the expanse of 
 			CSS and for his excitement and encouragement throughout the project’s conception.  Likewise, I’m grateful 
 			for all of those at Naughty Dog who have poured their soul into creating and sharing unforgettable 
